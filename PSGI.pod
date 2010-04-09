@@ -364,7 +364,7 @@ and B<SHOULD> be an HTTP status code as documented in L<RFC
 The headers B<MUST> be an array reference (B<not> a hash reference)
 of key/value pairs. This means it B<MUST> contain an even number of elements.
 
-The header B<MUST NOT> contain a key named C<Status>, onr any keys with C<:>
+The header B<MUST NOT> contain a key named C<Status>, or any keys with C<:>
 or newlines in their name. It B<MUST NOT> contain any keys that end in C<-> or
 C<_>.
 
@@ -379,8 +379,8 @@ C<Set-Cookie> lines).
 
 =head4 Content-Type
 
-There B<MUST> be a C<Content-Type> except when the C<Status> is 1xx, 204
-or 304, in which case there B<MUST NOT> be a content type.
+There B<MUST> be a C<Content-Type> header except when the C<Status> is 1xx, 204
+or 304, in which case there B<MUST NOT> be a C<Content-Type> header.
 
 =head4 Content-Length
 
